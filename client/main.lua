@@ -1,6 +1,4 @@
-local ox_target = exports.ox_target
-local ox_lib = exports.ox_lib
-
+local lib = exports.ox_lib
 local isMenuOpen = false
 
 RegisterCommand('admin_menu', function()
@@ -72,31 +70,4 @@ RegisterNetEvent('admin_menu:spawnNPC', function(npcData)
 
     FreezeEntityPosition(ped, true)
     SetModelAsNoLongerNeeded(model)
-
-    -- Add targeting options
-    if Config.TargetSystem == 'ox-target' then
-        exports.ox_target:addEntity(ped, {
-            {
-                label = 'Delete NPC',
-                icon = 'fas fa-trash',
-                action = function(entity)
-                    DeleteEntity(entity)
-                end
-            }
-        })
-    elseif Config.TargetSystem == 'qb-target' then
-        exports['qb-target']:AddEntityZone(ped, {
-            name = tostring(ped),
-            debugPoly = false,
-            options = {
-                {
-                    label = 'Delete NPC',
-                    icon = 'fas fa-trash',
-                    action = function()
-                        DeleteEntity(ped)
-                    end
-                }
-            }
-        })
-    end
 end)

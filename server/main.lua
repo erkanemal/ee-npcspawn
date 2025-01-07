@@ -3,12 +3,16 @@ local MySQL = exports.oxmysql
 AddEventHandler('onResourceStart', function(resourceName)
     if resourceName ~= GetCurrentResourceName() then return end
 
-    MySQL.query('SELECT * FROM persistent_npcs', {}, function(rows)
-        for _, row in ipairs(rows) do
-            TriggerClientEvent('admin_menu:spawnNPC', -1, row)
+    MySQL.query('SELECT * FROM persistent_npcs', function(rows)
+        if rows then
+            for _, row in ipairs(rows) do
+                TriggerClientEvent('admin_menu:spawnNPC', -1, row)
+            end
+        else
+            print('^1[ee-npcspawn] No NPCs found in the database!^7')
         end
     end)
-end)
+    
 
 RegisterNetEvent('admin_menu:saveNPC', function(model, coords, emote)
     local src = source
