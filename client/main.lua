@@ -1,6 +1,3 @@
-local ox_target = exports.ox_target
-local ox_lib = exports.ox_lib
-
 local isMenuOpen = false
 
 RegisterCommand('admin_menu', function()
