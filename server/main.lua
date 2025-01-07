@@ -1,5 +1,6 @@
 local MySQL = exports.oxmysql
 
+-- Event to trigger NPC loading on resource start
 AddEventHandler('onResourceStart', function(resourceName)
     if resourceName ~= GetCurrentResourceName() then return end
 
@@ -12,8 +13,9 @@ AddEventHandler('onResourceStart', function(resourceName)
             print('^1[ee-npcspawn] No NPCs found in the database!^7')
         end
     end)
-    
+end)
 
+-- Event to save NPC data
 RegisterNetEvent('admin_menu:saveNPC', function(model, coords, emote)
     local src = source
     local xPlayer = ESX.GetPlayerFromId(src)

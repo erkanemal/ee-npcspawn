@@ -12,21 +12,32 @@ RegisterKeyMapping('admin_menu', 'Open Admin Menu', 'keyboard', Config.OpenMenuK
 function OpenAdminMenu()
     isMenuOpen = true
 
+    local options = {
+        {
+            label = 'Spawn NPC',
+            description = 'Select a ped and emote for the NPC',
+            onSelect = function() SpawnNPCMenu() end
+        },
+        {
+            label = 'Close Menu',
+            onSelect = function() isMenuOpen = false end
+        },
+    }
+
+    -- Ensure options are valid
+    if not options or #options == 0 then
+        print('^1[ee-npcspawn] Error: Options table is nil or empty!^7')
+        return
+    end
+
+    -- Register the context menu
     lib.registerContext({
         id = 'admin_menu',
         title = 'Admin NPC Menu',
-        options = {
-            { 
-                label = 'Spawn NPC', 
-                description = 'Select a ped and emote for the NPC', 
-                onSelect = function() SpawnNPCMenu() end 
-            },
-            {
-                label = 'Close Menu',
-                onSelect = function() isMenuOpen = false end
-            },
-        }
+        options = options
     })
+
+    -- Display the menu
     lib.showContext('admin_menu')
 end
 
