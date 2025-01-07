@@ -19,5 +19,6 @@ server_scripts {
 dependencies {
     'oxmysql',
     'ox_lib',
-    'ox_target'
+    'ox_target',
+    'qb-target'
 }
