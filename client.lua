@@ -30,7 +30,7 @@ local function spawnNPC(npcData)
     FreezeEntityPosition(ped, true)
     SetBlockingOfNonTemporaryEvents(ped, true)
 
-    makeNPCInvincible(ped) -- Make the NPC invincible
+    makeNPCInvincible(ped) 
 
     if npcData.animation then
         loadAnimDict(npcData.animation.dict)
@@ -40,15 +40,13 @@ local function spawnNPC(npcData)
     table.insert(createdNPCs, ped)
 end
 
--- Spawn NPCs from the config
 Citizen.CreateThread(function()
     for _, npc in ipairs(Config.NPCs) do
         spawnNPC(npc)
-        TriggerServerEvent('npcs:saveNPC', npc) -- Notify server of spawned NPC
+        TriggerServerEvent('npcs:saveNPC', npc) 
     end
 end)
 
--- Reapply NPCs for players who join mid-session
 RegisterNetEvent('npcs:loadNPCs')
 AddEventHandler('npcs:loadNPCs', function(npcs)
     for _, npc in ipairs(npcs) do

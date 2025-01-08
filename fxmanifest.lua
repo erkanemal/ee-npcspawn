@@ -1,7 +1,7 @@
 fx_version 'cerulean'
 game 'gta5'
 
-author 'Erkan'
+author 'Erkan Emal'
 description 'Standalone NPC Spawner'
 version '1.0.0'
 
