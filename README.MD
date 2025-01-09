@@ -1,4 +1,4 @@
-# Turf Wars System
+# NPC spawn System
 
 An simple NPC spawn system for FiveM servers with with configurable NPCs.
 
