@@ -14,11 +14,11 @@ shared_scripts {
 server_script '@oxmysql/lib/MySQL.lua'
 
 client_scripts {
-    'client.lua'
+    'client/client.lua'
 }
 
 server_scripts {
-    'server.lua'
+    'server/server.lua'
 }
 
 files {
