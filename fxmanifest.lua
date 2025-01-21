@@ -1,3 +1,4 @@
+lua54 'yes'
 fx_version 'cerulean'
 game 'gta5'
 
@@ -5,6 +6,21 @@ author 'Erkan Emal'
 description 'Standalone NPC Spawner'
 version '1.0.0'
 
-server_script 'server.lua'
-client_script 'client.lua'
-shared_script 'config.lua'
+shared_scripts {
+    'config.lua',
+    '@ox_lib/init.lua'
+}
+
+server_script '@oxmysql/lib/MySQL.lua'
+
+client_scripts {
+    'client.lua'
+}
+
+server_scripts {
+    'server.lua'
+}
+
+files {
+    'npcs.sql'
+}
