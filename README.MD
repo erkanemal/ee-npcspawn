@@ -9,7 +9,8 @@ An simple NPC spawn system for FiveM servers with with configurable NPCs.
 
 ## Installation
 1. Copy the `ee-npcspawn` folder to your resources directory
-2. Add the following to your server.cfg: 'ensure ee-npcspawn'
+2. Add the following to your server.cfg: 'add_ace group.admin command.placenpc allow' and 'ensure ee-npcspawn'
+3. Type `/placenpce` ingame to open the menu and start spawning NPCs
 
 
 
