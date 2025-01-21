@@ -12,4 +12,6 @@ An simple NPC spawn system for FiveM servers with with configurable NPCs.
 2. Add the following to your server.cfg: 'ensure ee-npcspawn'
 
 
-https://docs.fivem.net/docs/game-references/ped-models/
+
+Ped models: https://docs.fivem.net/docs/game-references/ped-models/
+Animation list: animationlist.txt
