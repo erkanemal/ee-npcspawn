@@ -6,6 +6,9 @@ An simple NPC spawn system for FiveM servers with with configurable NPCs.
 - Let's you place NPCs on your server.
 - You can fully configure the NPCs in the 'config.lua' (animations, NPC model...)
 
+## Dependencys
+- ox-lib
+- oxmysql
 
 ## Installation
 1. Copy the `ee-npcspawn` folder to your resources directory
