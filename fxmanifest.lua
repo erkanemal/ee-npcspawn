@@ -7,8 +7,7 @@ description 'Standalone NPC Spawner'
 version '1.0.0'
 
 shared_scripts {
-    'config.lua',
-    '@ox_lib/init.lua'
+    'config.lua'
 }
 
 server_script '@oxmysql/lib/MySQL.lua'
@@ -22,5 +21,10 @@ server_scripts {
 }
 
 files {
-    'npcs.sql'
+    'npcs.sql',
+    'html/index.html',
+    'html/style.css',
+    'html/script.js'
 }
+
+ui_page 'html/index.html'

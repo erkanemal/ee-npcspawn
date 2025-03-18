@@ -7,5 +7,6 @@ CREATE TABLE IF NOT EXISTS `npcs` (
     `heading` float NOT NULL,
     `anim_dict` varchar(50) DEFAULT NULL,
     `anim_name` varchar(50) DEFAULT NULL,
+    `name` varchar(50) DEFAULT NULL, -- Added name column
     PRIMARY KEY (`id`)
-); 
+);

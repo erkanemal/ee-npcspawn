@@ -1,0 +1,218 @@
+:root {
+    --default-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
+      "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
+      "Source Han Sans CN", sans-serif;
+}
+
+.main-container {
+    overflow: hidden;
+    position: relative;
+    width: 372px;
+    height: 401px;
+    margin: auto;
+}
+
+.main-container,
+.main-container * {
+    box-sizing: border-box;
+}
+
+input,
+select,
+textarea,
+button {
+    outline: 0;
+    border: none;
+    background: transparent;
+    color: #ffffff;
+    font-family: Mozaic GEO, var(--default-font-family);
+    font-size: 12px;
+    font-weight: 590;
+}
+
+.new-npc-border {
+    position: relative;
+    width: 328px;
+    height: 27.568px;
+    margin: 27px 0 0 22px;
+    background: rgba(255, 146, 36, 0.24);
+    z-index: 3;
+    border-radius: 2px;
+}
+
+.new-npc {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    position: absolute;
+    width: 75px;
+    height: 22.054px;
+    top: 4px;
+    left: 127px;
+    color: #ff9224;
+    font-family: Mozaic GEO, var(--default-font-family);
+    font-size: 16px;
+    font-weight: 690;
+    line-height: 22.054px;
+    text-align: center;
+    white-space: nowrap;
+    z-index: 4;
+}
+
+.npc-model {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    position: relative;
+    width: 74px;
+    height: 21px;
+    margin: 26.432px 0 0 149px;
+    color: #ffffff;
+    font-family: Mozaic GEO, var(--default-font-family);
+    font-size: 14px;
+    font-weight: 590;
+    line-height: 20.72px;
+    text-align: center;
+    white-space: nowrap;
+    z-index: 6;
+}
+
+.npc-model-border {
+    position: relative;
+    width: 328px;
+    height: 28px;
+    margin: 8px 0 0 22px;
+    background: rgba(153, 153, 153, 0.2);
+    border-top: 1px solid #999999;
+    z-index: 8;
+    border-radius: 2px;
+}
+
+.npc-model-input {
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+    text-align: center;
+}
+
+.animation-title {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    position: relative;
+    width: 67px;
+    height: 21px;
+    margin: 16px 0 0 153px;
+    color: #ffffff;
+    font-family: Mozaic GEO, var(--default-font-family);
+    font-size: 14px;
+    font-weight: 590;
+    line-height: 20.72px;
+    text-align: center;
+    white-space: nowrap;
+    z-index: 15;
+}
+
+.animation-dropdown {
+    position: relative;
+    width: 328px;
+    height: 28px;
+    margin: 8px 0 0 22px;
+    background: rgba(153, 153, 153, 0.2);
+    z-index: 16;
+    border-radius: 2px;
+}
+
+.anim-select {
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+    background: rgba(153, 153, 153, 0.2);
+    color: #ffffff;
+    border-radius: 2px;
+}
+
+.anim-select:focus {
+    background: rgba(255, 146, 36, 0.5); /* Orange color when dropdown is open */
+    color: #ffffff;
+}
+
+.name-title {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    position: relative;
+    width: 71px;
+    height: 21px;
+    margin: 17px 0 0 151px;
+    color: #ffffff;
+    font-family: Mozaic GEO, var(--default-font-family);
+    font-size: 14px;
+    font-weight: 590;
+    line-height: 20.72px;
+    text-align: center;
+    white-space: nowrap;
+    z-index: 11;
+}
+
+.npc-name-input-field {
+    position: relative;
+    width: 328px;
+    height: 28px;
+    margin: 8px 0 0 22px;
+    background: rgba(153, 153, 153, 0.16);
+    z-index: 12;
+    border-radius: 2px;
+}
+
+.npc-name-input {
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+    text-align: center;
+}
+
+.create-border {
+    position: relative;
+    width: 328px;
+    height: 64px;
+    margin: 24px 0 0 22px;
+    background: rgba(178, 178, 178, 0.16);
+    border: 1px solid rgba(178, 178, 178, 0.24);
+    z-index: 18;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.create {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    position: absolute;
+    width: 53px;
+    height: 21px;
+    top: 20px;
+    left: 137px;
+    color: #d1d1d1;
+    font-family: Mozaic GEO, var(--default-font-family);
+    font-size: 14px;
+    font-weight: 590;
+    line-height: 20.72px;
+    text-align: center;
+    white-space: nowrap;
+    z-index: 19;
+}
+
+.main-border {
+    position: absolute;
+    width: 372px;
+    height: 401px;
+    top: 0;
+    left: 0;
+    background: url(https://static.codia.ai/image/2025-03-11/09043582-6f4a-4763-8bd7-6d2d17403318.png)
+      no-repeat center;
+    background-size: cover;
+    border-radius: 2px;
+    box-sizing: content-box;
+}
